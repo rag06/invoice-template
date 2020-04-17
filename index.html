@@ -2,17 +2,14 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>A simple, clean, and responsive HTML invoice template</title>
+    <title>Candilfip Invoice</title>
     
     <style>
     .invoice-box {
         max-width: 800px;
         margin: auto;
-        padding: 30px;
-        border: 1px solid #eee;
-        box-shadow: 0 0 10px rgba(0, 0, 0, .15);
-        font-size: 16px;
-        line-height: 24px;
+        font-size: 14px;
+        line-height: 20px;
         font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
         color: #555;
     }
@@ -96,6 +93,20 @@
     .rtl table tr td:nth-child(2) {
         text-align: left;
     }
+	.item-details  tr.heading td {
+		border:  1px solid #ddd;
+	}
+	.item-details  tr.item td {
+		border:  1px solid #ddd;
+	}
+	.item-details  tr.total-amount td {
+		border:  1px solid #ddd;
+		font-weight:600;
+	}
+	.item-details  tr.item td:nth-child(2), .item-details  tr.heading td:nth-child(2)  {
+        text-align: left;
+		width: 400px;
+    }
     </style>
 </head>
 
@@ -107,12 +118,10 @@
                     <table>
                         <tr>
                             <td class="title">
-                                 </td>
+                            </td>
                             
                             <td>
-                                Invoice #: 123<br>
-                                Created: January 1, 2015<br>
-                                Due: February 1, 2015
+                                Tax Invoice/Bill of Supply/Cash Memo
                             </td>
                         </tr>
                     </table>
@@ -123,13 +132,13 @@
                 <td colspan="2">
                     <table>
                         <tr>
-                            <td>
-                                Sparksuite, Inc.<br>
+                            <td> <strong>Sold by</strong> <br/>
+                                Candiflip Pvt Ltd.<br>
                                 12345 Sunny Road<br>
                                 Sunnyville, CA 12345
                             </td>
                             
-                            <td>
+                            <td> <strong>Billing Address</strong> <br/>
                                 Acme Corp.<br>
                                 John Doe<br>
                                 john@example.com
@@ -139,74 +148,105 @@
                 </td>
             </tr>
             
-            <tr class="heading">
-                <td>
-                    Payment Method
-                </td>
-                
-                <td>
-                    Check #
-                </td>
-            </tr>
-            
-            <tr class="details">
-                <td>
-                    Check
-                </td>
-                
-                <td>
-                    1000
-                </td>
-            </tr>
-            
-            <tr class="heading">
-                <td>
-                    Item
-                </td>
-                
-                <td>
-                    Price
+            <tr class="information">
+                <td colspan="2">
+                    <table>
+                        <tr>
+                            <td> 
+								<strong>Pan No.</strong> TWDF2354K <br/>
+								<strong>GST Registration No.</strong> 22424 343412 234nkj32  <br/>
+                            </td>
+                            
+                            <td> <strong>Shipping Address</strong> <br/>
+                                Acme Corp.<br>
+                                John Doe<br>
+                                john@example.com
+                            </td>
+                        </tr>
+                    </table>
                 </td>
             </tr>
             
-            <tr class="item">
-                <td>
-                    Website design
-                </td>
-                
-                <td>
-                    $300.00
-                </td>
-            </tr>
-            
-            <tr class="item">
-                <td>
-                    Hosting (3 months)
-                </td>
-                
-                <td>
-                    $75.00
-                </td>
-            </tr>
-            
-            <tr class="item last">
-                <td>
-                    Domain name (1 year)
-                </td>
-                
-                <td>
-                    $10.00
-                </td>
-            </tr>
-            
-            <tr class="total">
-                <td></td>
-                
-                <td>
-                   Total: $385.00
+            <tr class="information">
+                <td colspan="2">
+                    <table>
+                        <tr>
+                            <td> 
+								
+                            </td>
+                            
+                            <td>
+								<strong>Invoice  No.</strong> CAND-32323-223 <br/>
+								<strong>Order Date</strong> 22/02/43  <br/>
+                            </td>
+                        </tr>
+                    </table>
                 </td>
             </tr>
         </table>
+		<table class="item-details"  cellpadding="0" cellspacing="0">
+		<tr class="heading">
+                
+                <td>
+                    Sr. No.
+                </td>
+				<td>
+                    Description
+                </td>
+
+                <td>
+                   Unit Price
+                </td>
+                <td>
+                   Qty
+                </td>
+                <td>
+                   Net Amount
+                </td>
+                <td>
+                   Tax Rate
+                </td>
+                <td>
+                   Tax Amount
+                </td>
+                <td>
+                   Total Amount
+                </td>
+            </tr>
+            
+            <tr class="item">
+				<td>1</td>
+                <td>
+                    Website design
+                </td>
+                <td>
+                    Rs.300.00
+                </td>
+				<td> 1 </td>
+				<td> Rs. 300.00</td>
+				<td> 10 % </td>
+				<td> Rs. 30.00 </td>
+				<td> Rs. 330.00 </td>
+            </tr>
+            
+            <tr class="total-amount">
+                <td colspan="6">Total:</td>
+                 <td>
+                    Rs. 30.00
+                </td>
+                <td>
+                    Rs. 330.00
+                </td>
+            </tr>
+			<tr class="">
+                <td colspan="4"></td>
+                
+                <td colspan="4">
+				<br/><br/><br/><br/>
+                   Authorized Signature
+                </td>
+            </tr>
+		</table>
     </div>
 </body>
 </html>
